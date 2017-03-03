@@ -1,0 +1,126 @@
+@font-face {
+	font-family: "markerfelt_thin";
+	src: url("../fonts/Marker Felt Thin.ttf");
+}
+
+@font-face {
+	font-family: "markerfelt_wide";
+	src: url("../fonts/Marker Felt Wide.ttf");
+}
+
+@font-face {
+	font-family: "crimson_regular";
+	src: url("../fonts/CrimsonText-Roman.ttf");
+}
+
+$heading1: "markerfelt_wide";
+$heading2: "markerfelt_thin";
+$body: "crimson_regular";
+$dark-green: rgb(22, 92, 46);
+$light-green: #5c9541;
+$yellow: #ffe300;
+$dropdown: #54823a;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#sidebar {
+	background-color: red;
+	padding: 20px;
+	height: 100%;
+}
+
+#header-image img {
+	width: 100%;
+	height: auto;
+}
+
+#menu {
+	
+	
+	
+	div {
+		
+		background-color: $light-green;
+		border: thin solid $dark-green;
+		
+	}
+	
+	ul {
+		 list-style-type: none;
+	}
+	
+	li {
+		
+		border: thin solid $dark-green;
+		padding: 10px;
+		
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+}
+
+.site-identity {
+	width: 100%;
+	
+	
+	h1 {
+		
+		font-size: 1.5em !important;
+		
+	}
+	
+	h3 {
+		
+		font-size: 0.9em !important;
+		
+	}
+}
+
+.col-10
+{
+ 	background-color: white;
+}
+
+.recent_posts {
+	margin-left: 7px;
+}
+.col-6 {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+
+.col-6 h2 {
+	font-family: $heading1;
+	color: $dark-green;
+	padding-bottom: 10px;
+	border-bottom: 2px solid $dark-green;
+}
+
+.col-6 h3 {
+	font-family: $heading2;
+	padding-bottom: 5px;
+}
+
+.col-6 a {
+	color: $dark-green;	
+	text-decoration: none;
+}
+
+.col-6 small, .col-6 div {
+	font-family: $body;
+}
+
+.col-6 small {
+	color: $dark-green;
+}
+
+.col-6 .row {
+	margin-top: 15px;
+}
