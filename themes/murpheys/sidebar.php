@@ -1,3 +1,4 @@
+<!--sidebar-->
 <div class="col-3" id="sidebar">
     <div class="row" id="header-image">
         
