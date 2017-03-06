@@ -1,8 +1,12 @@
 <?php get_header() ?>
 <?php get_sidebar() ?>
-<div class="col-9">
+<div class="col-9 background">
+	
+	<!-- ANNALISE IS WORKING ON THIS FILE -->
+	
 	<div class="row">
-		<div class="col-10">
+		<div class="col-1"></div>
+		<div class="col-10 content">
 			<div class="row">
 				<div class="hero-slider col-12" >
 				<!-- This is the home slider (slickjs) -->
@@ -97,7 +101,8 @@
 					<?php endif; ?>
 				</div> <!-- end Upcoming Events -->
 			</div>
-		</div>
+		</div> <!-- end col-10 -->
+		<div class="col-1"></div>
 	</div>
 </div> <!-- end col-9 -->
 
