@@ -10,6 +10,8 @@
  * @version 1.0
  */
 
+// Warner hopes this works!
+
 get_header(); ?>
 <?php get_sidebar(); ?>
 
