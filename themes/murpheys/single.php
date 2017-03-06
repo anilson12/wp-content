@@ -10,7 +10,7 @@
  * @version 1.0
  */
 
-// Warner hopes this works!
+// Warner hopes this works please!
 
 get_header(); ?>
 <?php get_sidebar(); ?>
