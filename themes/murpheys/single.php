@@ -10,17 +10,19 @@
  * @version 1.0
  */
 
+// Warner hopes this works please!
+
 get_header(); ?>
 <?php get_sidebar(); ?>
-
-		<div class="col-9">
+		<div class="col-9" id="single">
 		<h1><?php echo get_the_title(); ?></h1>
-			
+		
 			<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
 					echo get_the_post_thumbnail();
+					echo get_the_content();
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
@@ -31,6 +33,6 @@ get_header(); ?>
 			?>
 
 	</div><!-- #primary -->
-	
+	</div>
 
 <?php get_footer();

@@ -6,7 +6,11 @@ Author URI: http://pacificu.edu
 Description: Custom theme for Murphy's Furniture Store
 Version: 0.1
 License: Copyright 2017 Pacific University
-Tags: Furniture, Green, Yellow, Wood
+Tags: Furniture, Green, Yellow, Wood, locally made
 Text Domain: murphys-textdomain
  */
  
+ 
+#single_post{
+	width: 100%;
+}
