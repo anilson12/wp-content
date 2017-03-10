@@ -1,5 +1,9 @@
 <?php
 /**
+	
+HEY EVERYONE (HI WARNER) I'M TRYING AGAIN
+	
+	
  * The template for displaying archive pages
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -9,49 +13,29 @@
  * @since 2017 0.1
  */
 
-get_header(); ?>
+get_header();
+get_sidebar(); ?>
 
+
+<div class='col-9'>
+
+	
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			
+			<h1>Archive</h1>
+			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<h2><?php the_title(); ?></h2>
+				<?php the_post_thumbnail(); ?>
+				<?php the_date(); ?>
+				<?php the_content(); ?>
+    
+			<?php endwhile; else: ?>
+				<?php _e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?>
+			<?php endif; ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'murphys' ),
-				'next_text'          => __( 'Next page', 'murphys' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'murphys' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
-
+		</main>
+	</section>
+</div>
 <?php get_footer(); ?>

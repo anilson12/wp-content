@@ -6,6 +6,11 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<style>
+	html {
+		margin-top: 0 !important;
+	}
+</style>
 </head>
 
 <body>

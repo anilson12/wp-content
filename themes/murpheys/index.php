@@ -1,8 +1,12 @@
 <?php get_header() ?>
 <?php get_sidebar() ?>
-<div class="col-9">
+<div class="col-9 background">
+	
+	<!-- ANNALISE IS WORKING ON THIS FILE -->
+	
 	<div class="row">
-		<div class="col-10">
+		<div class="col-1"></div>
+		<div class="col-10 content">
 			<div class="row">
 				<div class="hero-slider col-12" >
 				<!-- This is the home slider (slickjs) -->
@@ -21,7 +25,7 @@
 					<?php if ( $the_query->have_posts() ) : ?>
 					
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<div><?php the_post_thumbnail('large'); ?></div>
+							<div><?php the_post_thumbnail("full"); ?></div>
 						<?php endwhile; ?>
 					
 						<?php wp_reset_postdata(); ?>
@@ -33,7 +37,7 @@
 			</div>
 			
 			<div class="row">
-				<div class="col-6 recent_posts">
+				<div class="col-5 recent_posts">
 				<!-- Recent Posts -->
 					<h2>Recent Posts</h2>
 					<?php
@@ -51,7 +55,7 @@
 					
 						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<div class="row">
-								<div class="col-5"><?php the_post_thumbnail("thumbnail") ?></div>
+								<div class="col-4"><?php the_post_thumbnail("thumbnail") ?></div>
 								<div class="col-7">
 									<h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									<small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
@@ -67,7 +71,7 @@
 					<?php endif; ?>
 				</div> <!-- end recent posts -->
 				
-				<div class="col-6">
+				<div class="col-5">
 				<!-- Recent Posts -->
 					<h2>Upcoming Events</h2>
 					<?php
@@ -97,7 +101,8 @@
 					<?php endif; ?>
 				</div> <!-- end Upcoming Events -->
 			</div>
-		</div>
+		</div> <!-- end col-10 -->
+		<div class="col-1"></div>
 	</div>
 </div> <!-- end col-9 -->
 
