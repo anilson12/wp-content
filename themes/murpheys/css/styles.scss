@@ -27,64 +27,88 @@ $dropdown: #54823a;
 }
 
 #sidebar {
-	background-color: red;
-	padding: 20px;
+	background-image: url("../images/navbar.jpg");
+	background-size:cover;
 	height: 100%;
+	position: relative;
 }
 
 #header-image img {
-	width: 100%;
+	width: 90%;
 	height: auto;
-}
+	margin: 5%;
 
-#menu {
-	
-	
-	
-	div {
-		
-		background-color: $light-green;
-		border: thin solid $dark-green;
-		
-	}
-	
-	ul {
-		 list-style-type: none;
-	}
-	
-	li {
-		
-		border: thin solid $dark-green;
-		padding: 10px;
-		
-	}
-	
-	a {
-		text-decoration: none;
-	}
-	
 }
 
 .site-identity {
-	width: 100%;
+	width: 90%;
+	height: auto;
+	margin: 5%;
 	
 	
 	h1 {
-		
-		font-size: 1.5em !important;
+		font-family: "crimson_regular";
+		color: $dark-green;
+		font-size: 1.3em !important;
 		
 	}
 	
 	h3 {
-		
-		font-size: 0.9em !important;
+		font-family: "crimson_regular";
+		font-size: 1.2em !important;
 		
 	}
+}
+
+.menu-menu-1-container {
+  	width: 100%;
+  	background-color: $light-green;
+	margin: 0, -20px, 0, -20px;
+}
+
+.menu, .sub-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a {
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+	font-family: $heading1;
+	border: thin solid $dark-green;
+}
+
+
+.menu a:hover {
+	background-color: $dark-green;
+}
+
+.menu li:hover .sub-menu {
+  	display: block;
+  	max-height: 200px;
+}
+
+.sub-menu a {
+  	background-color: $dropdown;
+}
+
+.sub-menu a:hover {
+  	background-color: $dark-green;
+}
+
+.sub-menu {
+  	overflow: hidden;
+  	max-height: 0;
+  	-webkit-transition: all 0.5s ease-out;
 }
 
 .col-10
 {
  	background-color: white;
+	
 }
 
 .recent_posts {
@@ -124,3 +148,5 @@ $dropdown: #54823a;
 .col-6 .row {
 	margin-top: 15px;
 }
+
+/* sass --watch wp-content/themes/murpheys/css/styles.scss:wp-content/themes/murpheys/css/styles.min.css */
